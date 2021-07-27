@@ -46,7 +46,7 @@ input#search-bar:focus:-ms-placeholder {
 .search-icon {
   position: relative;
   float: right;
-  width: 35px;
+  width: 30px;
   height: auto;
   top: -49px;
   right: -115px;
