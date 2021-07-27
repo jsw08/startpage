@@ -23,6 +23,7 @@ input#search-bar {
   font-size: 1rem;
   border: 2px solid #D0CFCE;
   outline: none;
+  border-radius: 20px;
 }
 input#search-bar:focus {
   border: 2px solid #008ABF;
@@ -45,12 +46,13 @@ input#search-bar:focus:-ms-placeholder {
 .search-icon {
   position: relative;
   float: right;
-  width: 35px!important;
-  height: 35px!imporatnt;
+  width: 35px;
+  height: auto;
   top: -49px;
-  right: -92px;
+  right: -115px;
   border: 2px solid white;
-  padding: 5px;
+  padding: 7px;
+  border-radius: 20px;
 }
 
 input[type="text"]
