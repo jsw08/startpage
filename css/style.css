@@ -34,6 +34,7 @@ input#search-bar:focus::-webkit-input-placeholder {
   transition: opacity 0.45s ease;
   opacity: 0;
 }
+
 input#search-bar:focus::-moz-placeholder {
   transition: opacity 0.45s ease;
   opacity: 0;
@@ -58,4 +59,23 @@ input#search-bar:focus:-ms-placeholder {
 input[type="text"]
 {
     background: transparent;
+}
+
+focus {
+  border: 2px solid #008ABF;
+  transition: 0.35s ease;
+  color: #008ABF;
+}
+.search-bar:focus::-webkit-input-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+
+.search-bar:focus::-moz-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+.search-bar:focus:-ms-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
 }
