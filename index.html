@@ -8,6 +8,17 @@
     <meta name="author" content="Jurn Wubben">
     <link rel="stylesheet" href="css/style.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script> 
+    $(function() {      //aka document.ready
+      $("input#search-bar").focus( function() {
+        $("input.search-icon").addclass("focus");
+      });
+      
+      $("input#search-bar").blur( function() {
+        $("input.search-icon").removeclass("focus");
+      });
+    });
+    </script>
   </head>
   <body>
     <div class="container">
