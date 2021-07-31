@@ -2,21 +2,70 @@
 <html lang="en">
   <head>
     <meta name="description" content="jsw08's homepage" />
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>StartPage</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Jurn Wubben">
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Jurn Wubben" />
+    <link rel="stylesheet" href="css/style.css" />
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   </head>
   <body>
     <div class="container">
-      <form class="search-container" action="https://google.nl/search">
-        <input type="text" id="search-bar" placeholder="What can I help you with today?" name="q" tabindex="1"  autofocus="autofocus">
-        <input type="hidden" name="ie" value="utf-8">
-        <input type="hidden" name="oe" value="utf-8">
-        <input class="search-icon" type="image" src="https://cdn.glitch.com/481404c8-224c-4c7b-8a32-eb02c110aa7f%2Floop.png?v=1627374278300" tabindex="2">
-        </form>
-      </div>
-   </body>
+      <form
+        class="search-container"
+        id="form"
+        action="https://google.nl/search"
+      >
+        <input
+          type="text"
+          id="search-bar"
+          placeholder="What can I help you with today?"
+          name="q"
+          tabindex="1"
+          autofocus="autofocus"
+        />
+        <input type="hidden" name="ie" value="utf-8" />
+        <input type="hidden" name="oe" value="utf-8" />
+        <input
+          class="search-icon"
+          type="image"
+          src="https://cdn.glitch.com/481404c8-224c-4c7b-8a32-eb02c110aa7f%2Floop.png?v=1627374278300"
+          id="button"
+          tabindex="2"
+        />
+      </form>
+    </div>
+    <script>
+      document.getElementById("search-bar").addEventListener(
+        "keydown",
+        function(e) {
+          e = e || window.event;
+          var key = e.which || e.keyCode; // keyCode detection
+          var ctrl = e.ctrlKey ? e.ctrlKey : key === 17 ? true : false; // ctrl detection
+
+          if (key == 18 && ctrl) {
+            input = document.getElementById("search-bar");
+            value = input.value;
+            switch (value) {
+              case "d":
+                var css =
+                  "#search-bar:focus {border: 2px solid orange!important;}";
+                var style = document.createElement("style");
+                if (style.styleSheet) {
+                  style.styleSheet.cssText = css;
+                } else {
+                  style.appendChild(document.createTextNode(css));
+                }
+                document.getElementById("search-bar").value = '';
+                document.getElementsByTagName("head")[0].appendChild(style);
+                break;
+              case "g":
+                document.location.reload();
+            }
+          }
+        },
+        false
+      );
+    </script>
+  </body>
 </html>
