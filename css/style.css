@@ -60,22 +60,3 @@ input[type="text"]
 {
     background: transparent;
 }
-
-focus {
-  border: 2px solid #008ABF;
-  transition: 0.35s ease;
-  color: #008ABF;
-}
-.search-bar:hover::-webkit-input-placeholder {
-  transition: opacity 0.45s ease;
-  opacity: 0;
-}
-
-.search-bar:hover::-moz-placeholder {
-  transition: opacity 0.45s ease;
-  opacity: 0;
-}
-.search-bar:hover:-ms-placeholder {
-  transition: opacity 0.45s ease;
-  opacity: 0;
-}
